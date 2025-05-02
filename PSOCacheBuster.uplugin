@@ -10,6 +10,7 @@
 	"DocsURL": "https://github.com/Flassari/PSOCacheBuster",
 	"MarketplaceURL": "",
 	"SupportURL": "https://github.com/Flassari/PSOCacheBuster",
+	"EnabledByDefault": true,
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
