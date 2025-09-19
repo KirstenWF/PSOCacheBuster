@@ -19,7 +19,7 @@
 		{
 			"Name": "PSOCacheBuster",
 			"Type": "Runtime",
-			"LoadingPhase": "PostConfigInit"
+			"LoadingPhase": "PostSplashScreen"
 		}
 	]
 }
