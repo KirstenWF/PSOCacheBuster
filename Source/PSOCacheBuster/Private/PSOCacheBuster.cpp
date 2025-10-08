@@ -3,9 +3,11 @@
 #include "Misc/CommandLine.h"
 #include "Misc/ConfigCacheIni.h"
 #include "Modules/ModuleManager.h"
+#if PLATFORM_WINDOWS
 #include "RHI.h"
 #include "Windows/WindowsPlatformMisc.h"
 #include "HAL/FileManager.h"
+#endif //PLATFORM_WINDOWS
 
 DEFINE_LOG_CATEGORY_STATIC(LogPSOCacheBuster, Display, All);
 
@@ -25,6 +27,7 @@ protected:
 	*/
 	static void ClearPSODriverCache()
 	{
+#if PLATFORM_WINDOWS
 		FString LocalAppDataFolder = FPlatformMisc::GetEnvironmentVariable(TEXT("LOCALAPPDATA"));
 		if (!LocalAppDataFolder.IsEmpty())
 		{
@@ -74,6 +77,7 @@ protected:
 		{
 			UE_LOG(LogPSOCacheBuster, Error, TEXT("clearPSODriverCache failed: please ensure that LOCALAPPDATA points to C:\\Users\\<username>\\AppData\\Local"));
 		}
+#endif //PLATFORM_WINDOWS
 	}
 
 public:
