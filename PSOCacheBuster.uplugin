@@ -19,7 +19,11 @@
 		{
 			"Name": "PSOCacheBuster",
 			"Type": "Runtime",
-			"LoadingPhase": "PostSplashScreen"
+			"LoadingPhase": "PostSplashScreen",
+			"PlatformAllowList": [
+				"Win64",
+				"WinGDK"
+			]
 		}
 	]
 }

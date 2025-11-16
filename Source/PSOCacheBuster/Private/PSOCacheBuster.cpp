@@ -83,7 +83,7 @@ protected:
 public:
 	virtual void StartupModule() override
 	{
-#if IS_CLIENT_TARGET || UE_GAME // Ignore Editor, Server, and Program build targets
+#if UE_GAME // Only for GAME targets
 
 		if (FApp::GetBuildConfiguration() == EBuildConfiguration::Shipping)
 		{
